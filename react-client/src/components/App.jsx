@@ -19,6 +19,10 @@ class App extends React.Component {
       <Router history={browserHistory}>
         <Switch>
           <Route exact path='/' component={ Main } />
+          <Route path='/projects' component={ Main } />
+          <Route path='/music' component={ Main } />
+          <Route path='/advocacy' component={ Main } />
+          <Route path='/games' component={ Main } />
         </Switch>
       </Router>
     )

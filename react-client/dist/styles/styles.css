@@ -1,0 +1,28 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+.mainBackground {
+	min-width: 100vw !important;
+	min-height: 100vh !important;
+	background: linear-gradient(pink, black) !important;
+}
+
+.welcome {
+	font-size: 14em !important;
+	color: lightgray !important;
+}
+
+.secondWelcomeMessage, .fourthWelcomeMessage {
+	font-size: 10em !important;
+	color: lightgray !important;
+}
+
+.thirdWelcomeMessage {
+	font-size: 10em !important;
+	color: skyblue !important;
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { applyMiddleware } from 'redux';
 import { Router, Route } from 'react-router-dom';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import App from './App.jsx';
