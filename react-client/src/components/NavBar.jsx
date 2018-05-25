@@ -17,6 +17,7 @@ class NavBar extends React.Component {
 				fixed='top' 
 				inverted={true}
 				size='large'
+				style={{ minHeight: '40px' }}
 			>
 				<Link to='/'>
 					<Menu.Item link={true}>Home</Menu.Item>

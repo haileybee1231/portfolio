@@ -1,5 +1,6 @@
 import React from 'react';
 import { Menu, Icon } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 const Footer = props => (
 	<Menu
@@ -8,45 +9,54 @@ const Footer = props => (
 		icon={true}
 		>
 		<Menu.Menu position='left'>
-			<Menu.Item>
-				<a href='https://www.linkedin.com/in/haileybobella/'>
+			<a href='https://www.linkedin.com/in/haileybobella/'>
+				<Menu.Item>
 					<Icon
 						size='big'
 						link={true}
 						name='linkedin square'
 					/>
-				</a>
-			</Menu.Item>
-			<Menu.Item>
-				<a href='https://github.com/haileybee1231'>
+				</Menu.Item>
+			</a>
+			<a href='https://github.com/haileybee1231'>
+				<Menu.Item>
 					<Icon
 						size='big'
 						link={true}
 						name='github'
 					/>
-				</a>
-			</Menu.Item>
-			<Menu.Item>
-				<a href='https://medium.com/@haileyjanebobella'>
+				</Menu.Item>
+			</a>
+			<a href='https://medium.com/@haileyjanebobella'>
+				<Menu.Item>
 					<Icon
 						size='big'
 						link={true}
 						name='medium'
 					/>
-				</a>
-			</Menu.Item>
-				<a href='https://www.facebook.com/hailey.bobella'>
-			<Menu.Item>
+				</Menu.Item>
+			</a>
+			<a href='https://www.facebook.com/hailey.bobella'>
+				<Menu.Item>
 					<Icon
 						size='big'
 						link={true}
 						name='facebook square'
 					/>
-			</Menu.Item>
-				</a>
+				</Menu.Item>
+			</a>
+			<Link to='/resume'>
+				<Menu.Item>
+					<Icon
+						size='big'
+						link={true}
+						name='file text'
+					/>
+				</Menu.Item>
+			</Link>
 		</Menu.Menu>
 		<Menu.Item position='right'>
-		&copy; 2018 &mdash; Hailey Bobella
+			&copy; 2018 &mdash; Hailey Bobella
 		</Menu.Item>
 	</Menu>
 )

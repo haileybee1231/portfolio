@@ -1,14 +1,16 @@
 html,body {
-    width: 100%;
+    width: 100% !important;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+	overflow-x: hidden;
+	box-sizing: border-box;
 }
 
-.mainBackground {
+.mainBackground, .ui.container {
 	min-width: 100vw !important;
 	min-height: 100vh !important;
+	margin: 0px !important;
 	background: linear-gradient(pink, black) !important;
 }
 

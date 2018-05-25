@@ -14,7 +14,7 @@ module.exports = {
   },
   resolve: { extensions: ['.js', '.jsx', '*'] },
   module : {
-    loaders : [
+    rules : [
       {
         test : /\.jsx?/,
         include : SRC_DIR,
@@ -31,6 +31,10 @@ module.exports = {
           limit: 10000,
         },
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
     ]
   },
   devServer: {

@@ -20,7 +20,7 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    this.animate();
+    setTimeout(() => this.animate(), 1000);
   }
 
   animate() {
@@ -126,6 +126,8 @@ class Main extends React.Component {
                 }
               </Segment>
             </Transition>
+          </Grid.Row>
+          <Grid.Row>
             <Transition visible={this.state.animationComplete} animation='fade up' duration={2000}>
               <Button 
                 onClick={() => {
