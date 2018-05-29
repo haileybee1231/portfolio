@@ -1,5 +1,5 @@
 import React from 'react';
-import { Segment, Header, Image } from 'semantic-ui-react';
+import { Segment, Header, Image, Icon } from 'semantic-ui-react';
 
 class Project extends React.Component {
 	constructor(props) {
@@ -32,6 +32,9 @@ class Project extends React.Component {
 				<Header.Subheader style={styles.subheader}>{project.description}</Header.Subheader>
 				<a href={project.link}>
 					<Image style={{margin: 'auto'}} height='350px' src={project.imageURL}/>
+				</a>
+				<a href={project.githubURL} target='_blank'>
+					<Icon name='github' size='big' link={true}/>
 				</a>
 			</Segment>
 		)
