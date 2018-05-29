@@ -7,7 +7,8 @@ import $ from 'jquery';
 import Main from './Main.jsx';
 import Portfolio from './Portfolio.jsx';
 import Resume from './Resume.jsx';
-import Snake from '../snake/Snake.jsx';
+import Snake from '../projects/snake/Snake.jsx';
+import WoTR_Calc from '../projects/calc/WoTR_Calc.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path='/' component={ Main } />
           <Route path='/projects/snake' component={ Snake } />
+          <Route path='/projects/wotr_calc' component={ WoTR_Calc } />
           <Route path='/projects' component={ Portfolio } />
           <Route path='/music' component={ Main } />
           <Route path='/advocacy' component={ Main } />

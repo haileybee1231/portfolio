@@ -20,6 +20,7 @@
   "homepage": "https://github.com/haileybee1231/portfolio#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "compression-webpack-plugin": "^1.1.11",
     "css-loader": "^0.28.11",
     "express": "^4.16.3",
     "history": "^4.7.2",

@@ -1,0 +1,86 @@
+label {
+  color: cornsilk !important;
+}
+
+.wotrForm {
+  border-radius: 10px !important;
+  margin-top: 25px !important;
+  background-color: rgba(0, 0, 0, 0.72) !important;
+  border: 2px solid white !important;
+}
+
+.wotrHeaderBox {
+  border-radius: 50px !important;
+  width: 70% !important;
+  margin: auto !important;
+}
+
+.wotrHeader {
+  font-family: hobbiton_brushhahobbitonbrush !important;
+}
+
+.calculator {
+  background: linear-gradient(black, darkgrey) !important;
+}
+
+.calculator > .calcDisplay {
+  font-size: 2em;
+  border-radius: 25px !important;
+  width: 100px !important;
+  margin: auto !important;
+  margin-top: 10px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  text-align: center !important;
+}
+
+.wotrSubheader {
+  font-family: ringbearermedium !important;
+  font-size: 18px !important;
+  color: cornsilk !important;
+}
+
+.quote {
+  text-align: center;
+  font-family: anironregular;
+  font-size: 1.2rem !important;
+  line-height: 2rem !important;
+  border-radius: 50px !important;
+}
+
+/*==Fonts==*/
+@font-face {
+    font-family: 'anironbold';
+    src: url('../assets/fonts/anirb___-webfont.ttf') format('truetype'),
+         url('../assets/fonts/anirb___-webfont.woff2') format('woff2'),
+         url('../assets/fonts/anirb___-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'anironregular';
+    src: url('../assets/fonts/anirm___-webfont.ttf') format('truetype'),
+         url('../assets/fonts/anirm___-webfont.woff2') format('woff2'),
+         url('../assets/fonts/anirm___-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hobbiton_brushhahobbitonbrush';
+    src: url('../assets/fonts/hobbitonbrushhand-webfont.ttf') format('truetype'),
+         url('../assets/fonts/hobbitonbrushhand-webfont.woff2') format('woff2'),
+         url('../assets/fonts/hobbitonbrushhand-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ringbearermedium';
+    src: url('../assets/fonts/ringm___-webfont.woff2') format('woff2'),
+         url('../assets/fonts/ringm___-webfont.woff') format('woff'),
+         url('../assets/fonts/ringm___-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
