@@ -7,7 +7,7 @@ html,body {
 	box-sizing: border-box;
 }
 
-.mainBackground, .ui.container {
+.mainBackground.ui.container {
 	min-width: 100vw !important;
 	min-height: 100vh !important;
 	margin: 0px !important;

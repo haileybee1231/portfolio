@@ -26,11 +26,11 @@ class Project extends React.Component {
 		}
 		return (
 			<Segment style={styles.segment}>
-				<a href={project.link}>
+				<a href={project.link} target={project.openInNewTab ? '_blank' : null}>
 					<Header as='h3'>{project.name}</Header>
 				</a>
 				<Header.Subheader style={styles.subheader}>{project.description}</Header.Subheader>
-				<a href={project.link}>
+				<a href={project.link} target={project.openInNewTab ? '_blank' : null}>
 					<Image style={{margin: 'auto'}} height='350px' src={project.imageURL}/>
 				</a>
 				<a href={project.githubURL} target='_blank'>
