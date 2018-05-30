@@ -6,6 +6,7 @@ import $ from 'jquery';
 
 import Main from './Main.jsx';
 import Portfolio from './Portfolio.jsx';
+import MusicPage from './MusicPage.jsx';
 import Resume from './Resume.jsx';
 import Snake from '../projects/snake/Snake.jsx';
 import WoTR_Calc from '../projects/calc/WoTR_Calc.jsx';
@@ -26,7 +27,7 @@ class App extends React.Component {
           <Route path='/projects/snake' component={ Snake } />
           <Route path='/projects/wotr_calc' component={ WoTR_Calc } />
           <Route path='/projects' component={ Portfolio } />
-          <Route path='/music' component={ Main } />
+          <Route path='/music' component={ MusicPage } />
           <Route path='/advocacy' component={ Main } />
           <Route path='/games' component={ Main } />
           <Route path='/resume' component={ Resume } />
