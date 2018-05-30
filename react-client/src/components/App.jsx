@@ -7,6 +7,9 @@ import $ from 'jquery';
 import Main from './Main.jsx';
 import Portfolio from './Portfolio.jsx';
 import MusicPage from './MusicPage.jsx';
+import Advocacy from './Advocacy.jsx';
+import Games from './Games.jsx';
+import Contact from './Contact.jsx';
 import Resume from './Resume.jsx';
 import Snake from '../projects/snake/Snake.jsx';
 import WoTR_Calc from '../projects/calc/WoTR_Calc.jsx';
@@ -28,9 +31,11 @@ class App extends React.Component {
           <Route path='/projects/wotr_calc' component={ WoTR_Calc } />
           <Route path='/projects' component={ Portfolio } />
           <Route path='/music' component={ MusicPage } />
-          <Route path='/advocacy' component={ Main } />
-          <Route path='/games' component={ Main } />
+          <Route path='/advocacy' component={ Advocacy } />
+          <Route path='/games' component={ Games } />
           <Route path='/resume' component={ Resume } />
+          <Route path='/contact' component={ Contact } />
+          <Route path='/contact' component={ Contact } />
         </Switch>
       </Router>
     )

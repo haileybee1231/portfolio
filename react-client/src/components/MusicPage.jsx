@@ -49,7 +49,7 @@ class MusicPage extends React.Component {
 		clearInterval(window.changeInterval);
 
 		let { currentImage, images } = this.state
-		console.log(prev, currentImage, images.length)
+
 		this.setState({
 			currentImage: prev
 				? currentImage === 0 

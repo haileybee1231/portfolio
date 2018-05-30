@@ -20,6 +20,18 @@ class Snake extends React.Component {
 	}
 
 	render() {
+		const styles = {
+			canvas: {
+				color: 'white',
+				backgroundColor: 'black',
+				border: '2px solid white',
+				margin: '0 auto',
+				position: 'relative',
+				textAlign: 'center',
+				display: 'block',
+				overflow: 'hidden',
+			}
+		}
 		return (
 			<Container className={'mainBackground'}>
 				<Grid
@@ -31,7 +43,8 @@ class Snake extends React.Component {
 					</Grid.Row>
 					<Grid.Row style={{ marginTop: '100px' }}>
 						<canvas 
-							id='canvas' 
+							style={styles.canvas}
+							id='canvas'
 							width='450' 
 							height='450'
 						/>
