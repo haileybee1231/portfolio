@@ -38,3 +38,8 @@ html,body {
   border: 2px solid white !important;
   width: 30% !important;
 }
+
+.contactFormWide {
+	width: 80% !important;
+	margin-top: 15% !important;
+}

@@ -22,6 +22,11 @@ class Contact extends React.Component {
 		}
 	}
 
+	componentDidMount() {
+		window.addEventListener('resize', this.resize.bind(this));
+		this.resize();
+	}
+
 	handleChange(e, { name, value }) {
 		this.setState({ [name]: value })
 	}
@@ -79,6 +84,10 @@ class Contact extends React.Component {
 		this.setState({ modalOpen: false })
 	}
 
+	resize() {
+		this.setState({ resize: window.innerWidth <= 1600 })
+	}
+
 	render() {
 		const styles = {
 			formHeader: {
@@ -97,7 +106,7 @@ class Contact extends React.Component {
 					<Grid.Row>
 						<NavBar />
 					</Grid.Row>
-					<Segment className='contactForm' textAlign='center' style={{marginTop: '200px'}}>
+					<Segment className={this.state.resize ? 'contactForm contactFormWide' : 'contactForm'} textAlign='center' style={{marginTop: '200px'}}>
 						<Form onSubmit={this.handleSubmit.bind(this)}>
 							<Header style={styles.formHeader} as='h1' content='Contact'/>
 							<Header style={styles.formHeader} as='h2'>Email: <a href='mailto:haileybobella@gmail.com'> haileybobella@gmail.com</a></Header>
