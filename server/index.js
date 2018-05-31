@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const url = require('url');
 let path = require('path');
 const app = express();
+const emailHandler = require('./emailhander.js');
+require('dotenv').config();
 
 // const http = require('http').Server(app);
 // require('../server/config/passport')(passportapp.use(passport.session());
@@ -16,6 +18,12 @@ app.get('*bundle.js', (req, res, next) => {
   res.set('Content-Type', 'text/javascript');
   next();
 });
+
+app.post('/email', (req, res) => {
+  let {name, subject, message, email} = req.body;
+  emailHandler.sendEmail(name, subject, message, email);
+  res.status(201).end();
+})
 
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '../react-client/dist/index.html'));

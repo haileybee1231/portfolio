@@ -28,3 +28,13 @@ html,body {
 	font-size: 10em !important;
 	color: skyblue !important;
 }
+
+.contactForm {
+  border-radius: 10px !important;
+  margin-top: 3% !important;
+  margin-bottom: 3% !important;
+  background-color: rgba(0, 0, 0, 0.72) !important;
+  color: white !important;
+  border: 2px solid white !important;
+  width: 30% !important;
+}

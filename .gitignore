@@ -12,6 +12,7 @@ pids
 *.pid.lock
 
 # Config
+.env
 *bundle.js
 webpack.config.js
 
