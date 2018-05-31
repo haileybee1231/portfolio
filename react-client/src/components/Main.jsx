@@ -15,29 +15,37 @@ class Main extends React.Component {
       visible: false,
       frame: 0,
       animationComplete: false,
-      destination: null
+      destination: null,
     }
+    this.timeouts = [];
   }
 
   componentDidMount() {
     setTimeout(() => this.animate(), 1000);
   }
 
+  componentWillUnmount() {
+    clearInterval(window.interval);
+    this.timeouts.forEach(timeout => clearTimeout(timeout))
+  }
+
   animate() {
     this.setState({ visible: true });
 
-    let interval = setInterval(() => {
+    window.interval = setInterval(() => {
       this.setState({ visible: !this.state.visible });
     }, 3000);
 
-    setTimeout(() => {
+    let timeouts = [];
+    
+    let timeout1 = setTimeout(() => {
       this.setState({
         message: 'I\'m Hailey.',
         frame: this.state.frame += 1,
       });
     }, 5000);
 
-    setTimeout(() => {
+    let timeout2 = setTimeout(() => {
       this.setState({
         message: 'I like to make things.',
         className: 'secondWelcomeMessage',
@@ -45,7 +53,7 @@ class Main extends React.Component {
       });
     }, 11000);
 
-    setTimeout(() => {
+    let timeout3 = setTimeout(() => {
       this.setState({
         message: 'I\'m a full-stack developer.',
         className: 'thirdWelcomeMessage',
@@ -54,7 +62,7 @@ class Main extends React.Component {
       });
     }, 17000);
     
-    setTimeout(() => {
+    let timeout4 = setTimeout(() => {
       this.setState({
         message: 'I play music.',
         frame: this.state.frame += 1,
@@ -62,7 +70,7 @@ class Main extends React.Component {
       });
     }, 23000);
     
-    setTimeout(() => {
+    let timeout5 = setTimeout(() => {
       this.setState({
         message: 'I\'m an advocate.',
         frame: this.state.frame += 1,
@@ -70,7 +78,7 @@ class Main extends React.Component {
       });
     }, 29000);
 
-    setTimeout(() => {
+    let timeout6 = setTimeout(() => {
       this.setState({
         message: 'And I love to play games.',
         frame: this.state.frame += 1,
@@ -78,7 +86,7 @@ class Main extends React.Component {
       });
     }, 35000);
 
-    setTimeout(() => {
+    let timeout7 = setTimeout(() => {
       this.setState({
         message: 'Please take a look around!',
         className: 'fourthWelcomeMessage',
@@ -87,15 +95,17 @@ class Main extends React.Component {
       });
     }, 41000);
 
-    setTimeout(() => {
+    let timeout8 = setTimeout(() => {
       this.setState({
         animationComplete: true
       })
     }, 45000);
 
-    setTimeout(() => {
+    let timeout9 = setTimeout(() => {
       clearInterval(interval);
     }, 42000);
+
+    this.timeouts.push(timeout1, timeout2, timeout3, timeout4, timeout5, timeout6, timeout7, timeout8, timeout9)
   }
 
   resetAnimation() {

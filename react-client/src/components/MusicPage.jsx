@@ -21,6 +21,14 @@ class MusicPage extends React.Component {
 
 	componentDidMount() {
 		this.startCarousel();
+		window.addEventListener('resize', this.resize.bind(this));
+		this.resize();
+	}
+
+	componentWillUnmount() {
+		clearInterval(window.changeInterval);
+		clearTimeout(window.timeout1);
+		clearTimeout(window.timeout2);
 	}
 
 	startCarousel(flag) {
@@ -31,12 +39,12 @@ class MusicPage extends React.Component {
 			this.setState({
 				transition: false
 			});
-			setTimeout(() => {
+			window.timeout1 = setTimeout(() => {
 				this.setState({
 					currentImage: currentImage < images.length - 1 ? currentImage + 1 : 0
 				})
 			}, 1000);
-			setTimeout(() => {
+			window.timeout2 = setTimeout(() => {
 				this.setState({
 					transition: true
 				})
@@ -63,12 +71,16 @@ class MusicPage extends React.Component {
 		this.startCarousel(true);
 	}
 
+	resize() {
+		this.setState({ resize: window.innerWidth <= 1600 })
+	}
+
 	render() {
 		const styles = {
 			carousel: {
 				position: 'relative',
 				margin: 'auto',
-				marginTop: '2%',
+				marginTop: this.state.resize ? '12%' : '2%',
 				backgroundColor: 'grey',
 				width: 'auto',
 			},

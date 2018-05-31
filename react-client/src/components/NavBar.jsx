@@ -89,6 +89,7 @@ class NavBar extends React.Component {
 					fixed='top'
 					inverted={true}
 					stackable={true}
+					size='massive'
 				>
 					<Link to='/'>
 						<Menu.Item link={true} style={styles.item}>Home</Menu.Item>
