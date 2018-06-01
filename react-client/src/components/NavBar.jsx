@@ -25,7 +25,10 @@ class NavBar extends React.Component {
 		const styles = {
 			item: {
 				fontSize: '3rem',
-			}
+			},
+			mobileMenu: {
+				marginTop: '7px',
+				marginRight: '-12px'			}
 		}
 		if (!this.mobileDeviceCheck()) {
 			return (
@@ -34,7 +37,6 @@ class NavBar extends React.Component {
 					inverted={true}
 					size='huge'
 					style={{ minHeight: '40px' }}
-					stackable={true}
 				>
 					<Link to='/'>
 						<Menu.Item link={true}>Home</Menu.Item>
@@ -101,12 +103,14 @@ class NavBar extends React.Component {
 							fixed='right'
 							size='massive'
 							style={{height: 'auto'}}
-						>
+							>
 							<Menu.Item icon={true} position='right'>
 								<Icon
 									name='bars'
 									size='huge'
 									inverted={true}
+									color='blue'
+									style={styles.mobileMenu}
 									onClick={this.mobileMenuToggle.bind(this)}
 								/>
 							</Menu.Item>
