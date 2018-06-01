@@ -10,7 +10,7 @@ export const projects = [
 	{
 		name: 'hackXchange',
 		description: 'Forum with point-based economy where developers can post coding questions and vote on solutions.',
-		link: 'https://www.hackxchange.heroku-app.com',
+		link: 'https://www.hackxchange.herokuapp.com',
 		imageURL: './assets/images/hackxchange.png',
 		githubURL: 'https://github.com/agile-sloths/hackXchange',
 		openInNewTab: true
@@ -18,7 +18,7 @@ export const projects = [
 	{
 		name: 'grassroots',
 		description: 'A tool for connecting voters with local politicians and election resources.',
-		link: 'https://www.hr-grassroots.heroku-app.com',
+		link: 'https://www.hr-grassroots.herokuapp.com',
 		imageURL: './assets/images/grassroots.png',
 		githubURL: 'https://github.com/agile-sloths/grassroots',
 		openInNewTab: true
