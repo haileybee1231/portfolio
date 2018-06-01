@@ -9,7 +9,7 @@ const Footer = props => (
 		icon={true}
 		>
 		<Menu.Menu position='left'>
-			<a href='https://www.linkedin.com/in/haileybobella/'>
+			<a href='https://www.linkedin.com/in/haileybobella/' target='_blank'>
 				<Menu.Item>
 					<Icon
 						size='big'
@@ -18,7 +18,7 @@ const Footer = props => (
 					/>
 				</Menu.Item>
 			</a>
-			<a href='https://github.com/haileybee1231'>
+			<a href='https://github.com/haileybee1231' target='_blank'>
 				<Menu.Item>
 					<Icon
 						size='big'
@@ -27,7 +27,7 @@ const Footer = props => (
 					/>
 				</Menu.Item>
 			</a>
-			<a href='https://medium.com/@haileyjanebobella'>
+			<a href='https://medium.com/@haileyjanebobella' target='_blank'>
 				<Menu.Item>
 					<Icon
 						size='big'
@@ -36,7 +36,7 @@ const Footer = props => (
 					/>
 				</Menu.Item>
 			</a>
-			<a href='https://www.facebook.com/hailey.bobella'>
+			<a href='https://www.facebook.com/hailey.bobella' target='_blank'>
 				<Menu.Item>
 					<Icon
 						size='big'
