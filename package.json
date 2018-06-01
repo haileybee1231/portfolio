@@ -31,6 +31,7 @@
     "node-mailer": "^0.1.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-favicon": "0.0.14",
     "react-pdf": "^3.0.5",
     "react-pinch-zoom-pan": "^1.4.5",
     "react-redux": "^5.0.7",
