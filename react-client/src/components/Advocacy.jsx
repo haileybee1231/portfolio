@@ -13,24 +13,47 @@ class Advocacy extends React.Component {
 		}
 	}
 
+	componentDidMount() {
+		window.addEventListener('resize', this.resize.bind(this));
+		this.resize();
+	}
+
+	resize() {
+		this.setState({ resize: window.innerWidth <= 1600 })
+		this.setState({ mobile: window.innerWidth <= 1000 })
+	}
+
 	render() {
 		const styles = {
 			segment: { 
 				margin: 'auto', 
-				marginTop: '50px', 
+				marginTop: this.state.resize ? this.state.mobile ? '20%' : '10%' : '5%', 
 				textAlign: 'center', 
 				borderRadius: '50px', 
-				width: '55%',
-				paddingRight: '80px',
-				paddingLeft: '80px'
+				width: this.state.resize ? this.state.mobile ? '90%' : '80%' : '55%',
+				paddingRight: '5%',
+				paddingLeft: '5%'
 			},
 			p: { 
-				fontSize: '1.4rem', 
-				textAlign: 'justify'
+				fontSize: this.state.mobile ? '2.0rem' : '1.4rem', 
+				textAlign: 'justify',
 			},
 			image: {
 				width: '200px',
-				marginTop: '300px'
+				marginTop: '300px',
+				marginBottom: '100px'
+			},
+			right: {
+				width: '200px',
+				marginTop: '50px',
+				marginBottom: '100px',
+				marginLeft: '23%',
+			},
+			left: {
+				width: '200px',
+				marginTop: '50px',
+				marginBottom: '100px',
+				marginLeft: '10%'
 			}
 		}
 		return (
@@ -43,8 +66,8 @@ class Advocacy extends React.Component {
 						<NavBar />
 					</Grid.Row>
 					<Container>
-						<Image href='http://www.safeaustin.org/' style={styles.image} src='./assets/images/safe.jpg' floated='left'/>
-						<Image href='http://www.wehealny.org/services/bi_socialwork/VictimServices/Volunteer_Opportunities.html' style={styles.image} src='./assets/images/mountsinai.png' floated='right'/>
+						{!this.state.mobile && <Image href='http://www.safeaustin.org/' style={styles.image} src='./assets/images/safe.jpg' floated='left' />}
+						{!this.state.mobile && <Image href='http://www.wehealny.org/services/bi_socialwork/VictimServices/Volunteer_Opportunities.html' style={styles.image} src='./assets/images/mountsinai.png' floated='right'/>}
 						<Segment inverted={true} style={styles.segment}>
 							<Header content='Sexual Assault Advocacy' as='h1'/>
 							<p style={styles.p}>I am passionate about achieving equality for women, racial minorities, the LBGTQ+ community, and other 
@@ -59,6 +82,8 @@ class Advocacy extends React.Component {
 							community on the unbalanced power structures that lead to that violence that I can help pave the way for a world in which all people
 							can be free from inequality and persecution.</p>
 						</Segment>
+						{this.state.mobile && <Image href='http://www.safeaustin.org/' style={styles.left} src='./assets/images/safe.jpg'/>}
+						{this.state.mobile && <Image href='http://www.wehealny.org/services/bi_socialwork/VictimServices/Volunteer_Opportunities.html' style={styles.right} src='./assets/images/mountsinai.png'/>}
 					</Container>
 					<Grid.Row>
 						<Footer />
