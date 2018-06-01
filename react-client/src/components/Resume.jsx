@@ -13,6 +13,11 @@ class Resume extends React.Component {
 			scale: 1
 		}
 	}
+
+	componentDidMount() {
+		window.addEventListener('resize', this.resize.bind(this));
+		this.resize(true);
+	}
 	
 	zoom(direction) {
 		if (direction === '+') {
@@ -26,7 +31,19 @@ class Resume extends React.Component {
 		}
 	}
 
+	resize(flag) {
+		this.setState({ resize: window.innerWidth <= 1200 });
+		flag && this.setState({ scale: 1.4 });
+	}
+
 	render() {
+		const styles = {
+			segment: { 
+				height: '65px', 
+				marginTop: this.state.resize ? '140px' : '40px', 
+				marginBottom: '-35px' 
+			}
+		}
 		return (
 			<Container className={'mainBackground'}>
 				<Grid
@@ -38,7 +55,7 @@ class Resume extends React.Component {
 						<NavBar />
 					</Grid.Row>
 					<Grid.Row>
-						<Segment style={{ height: '65px', marginTop: '40px', marginBottom: '-35px' }}>
+						<Segment style={styles.segment}>
 							<Grid columns={'equal'}>
 								<Grid.Column>
 									<Button onClick={() => this.zoom('-')}>-</Button>
