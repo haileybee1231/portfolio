@@ -4,7 +4,7 @@
   "description": "My personal portfolio.",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
+    "start": "concurrently \"npm run react-dev\" \"npm run server-dev\"",
     "react-dev": "webpack webpack.config.js -d --watch",
     "server-dev": "nodemon server/index.js"
   },
