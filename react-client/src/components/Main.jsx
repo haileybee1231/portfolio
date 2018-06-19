@@ -35,8 +35,6 @@ class Main extends React.Component {
     window.interval = setInterval(() => {
       this.setState({ visible: !this.state.visible });
     }, 2000);
-
-    let timeouts = [];
     
     let timeout1 = setTimeout(() => {
       this.setState({

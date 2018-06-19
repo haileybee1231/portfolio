@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Container, Grid, Image, Segment, Transition, Icon} from 'semantic-ui-react';
+import { Header, Container, Grid, Image, Segment, Transition, Icon } from 'semantic-ui-react';
 
 import NavBar from './NavBar.jsx';
 import Footer from './Footer.jsx';

@@ -54,7 +54,19 @@ class Advocacy extends React.Component {
 				marginTop: '50px',
 				marginBottom: '100px',
 				marginLeft: '10%'
-			}
+			},
+			right1: {
+				width: '200px',
+				marginTop: '50px',
+				marginBottom: '100px',
+				marginLeft: '25%',
+			},
+			left1: {
+				width: '200px',
+				marginTop: '50px',
+				marginBottom: '100px',
+				marginLeft: '15%'
+			},
 		}
 		return (
 			<Container className={'mainBackground'}>
@@ -66,8 +78,8 @@ class Advocacy extends React.Component {
 						<NavBar />
 					</Grid.Row>
 					<Container>
-						{!this.state.mobile && <Image href='http://www.safeaustin.org/' style={styles.image} src='./assets/images/safe.jpg' floated='left' />}
-						{!this.state.mobile && <Image href='http://www.wehealny.org/services/bi_socialwork/VictimServices/Volunteer_Opportunities.html' style={styles.image} src='./assets/images/mountsinai.png' floated='right'/>}
+						{(!this.state.mobile && !this.state.resize) && <Image href='http://www.safeaustin.org/' style={styles.image} src='./assets/images/safe.jpg' floated='left' />}
+						{(!this.state.mobile && !this.state.resize) && <Image href='http://www.wehealny.org/services/bi_socialwork/VictimServices/Volunteer_Opportunities.html' style={styles.image} src='./assets/images/mountsinai.png' floated='right'/>}
 						<Segment inverted={true} style={styles.segment}>
 							<Header content='Sexual Assault Advocacy' as='h1'/>
 							<p style={styles.p}>I am passionate about achieving equality for women, racial minorities, the LBGTQ+ community, and other 
@@ -84,6 +96,8 @@ class Advocacy extends React.Component {
 						</Segment>
 						{this.state.mobile && <Image href='http://www.safeaustin.org/' style={styles.left} src='./assets/images/safe.jpg'/>}
 						{this.state.mobile && <Image href='http://www.wehealny.org/services/bi_socialwork/VictimServices/Volunteer_Opportunities.html' style={styles.right} src='./assets/images/mountsinai.png'/>}
+						{(this.state.resize && !this.state.mobile) && <Image href='http://www.safeaustin.org/' style={styles.left1} src='./assets/images/safe.jpg'/>}
+						{(this.state.resize && !this.state.mobile) && <Image href='http://www.wehealny.org/services/bi_socialwork/VictimServices/Volunteer_Opportunities.html' style={styles.right1} src='./assets/images/mountsinai.png'/>}
 					</Container>
 					<Grid.Row>
 						<Footer />

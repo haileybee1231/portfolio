@@ -1,9 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { Router, Route } from 'react-router-dom';
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import App from './App.jsx';
-import reducers from '../reducers/reducers.js';
 import { store, history } from '../store/index.js';
 
 /* Root component can only have one child component (App).
