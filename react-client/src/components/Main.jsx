@@ -34,7 +34,7 @@ class Main extends React.Component {
 
     window.interval = setInterval(() => {
       this.setState({ visible: !this.state.visible });
-    }, 3000);
+    }, 2000);
 
     let timeouts = [];
     
@@ -43,7 +43,7 @@ class Main extends React.Component {
         message: 'I\'m Hailey.',
         frame: this.state.frame += 1,
       });
-    }, 5000);
+    }, 4000);
 
     let timeout2 = setTimeout(() => {
       this.setState({
@@ -51,7 +51,7 @@ class Main extends React.Component {
         className: 'secondWelcomeMessage',
         frame: this.state.frame += 1
       });
-    }, 11000);
+    }, 8000);
 
     let timeout3 = setTimeout(() => {
       this.setState({
@@ -60,7 +60,7 @@ class Main extends React.Component {
         frame: this.state.frame += 1,
         destination: 'projects'
       });
-    }, 17000);
+    }, 12000);
     
     let timeout4 = setTimeout(() => {
       this.setState({
@@ -68,7 +68,7 @@ class Main extends React.Component {
         frame: this.state.frame += 1,
         destination: 'music'
       });
-    }, 23000);
+    }, 16000);
     
     let timeout5 = setTimeout(() => {
       this.setState({
@@ -76,7 +76,7 @@ class Main extends React.Component {
         frame: this.state.frame += 1,
         destination: 'advocacy'
       });
-    }, 29000);
+    }, 20000);
 
     let timeout6 = setTimeout(() => {
       this.setState({
@@ -84,7 +84,7 @@ class Main extends React.Component {
         frame: this.state.frame += 1,
         destination: 'games'
       });
-    }, 35000);
+    }, 24000);
 
     let timeout7 = setTimeout(() => {
       this.setState({
@@ -93,17 +93,17 @@ class Main extends React.Component {
         frame: this.state.frame += 1,
         destination: null
       });
-    }, 41000);
+    }, 28000);
 
     let timeout8 = setTimeout(() => {
       this.setState({
         animationComplete: true
       })
-    }, 45000);
+    }, 30000);
 
     let timeout9 = setTimeout(() => {
       clearInterval(interval);
-    }, 42000);
+    }, 29000);
 
     this.timeouts.push(timeout1, timeout2, timeout3, timeout4, timeout5, timeout6, timeout7, timeout8, timeout9)
   }
@@ -126,7 +126,7 @@ class Main extends React.Component {
             <NavBar/>
           </Grid.Row>
           <Grid.Row style={{marginTop: '30vh'}}>
-            <Transition visible={this.state.visible} animation='fade' duration={2000}>
+            <Transition visible={this.state.visible} animation='fade' duration={1000}>
               <Segment style={{ backgroundColor: 'black', textAlign:'center' }}>
                 {this.state.frame < 3 || this.state.frame > 6
                   ? <Header as='h1' className={this.state.className}>{this.state.message}</Header>
@@ -138,7 +138,7 @@ class Main extends React.Component {
             </Transition>
           </Grid.Row>
           <Grid.Row>
-            <Transition visible={this.state.animationComplete} animation='fade up' duration={2000}>
+            <Transition visible={this.state.animationComplete} animation='fade up' duration={1000}>
               <Button 
                 onClick={() => {
                   this.resetAnimation()
