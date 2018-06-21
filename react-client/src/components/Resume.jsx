@@ -33,7 +33,7 @@ class Resume extends React.Component {
 
 	resize(flag) {
 		this.setState({ resize: window.innerWidth <= 1200 });
-		flag && this.setState({ scale: 1.4 });
+		flag && this.setState({ scale: 1 });
 	}
 
 	render() {
@@ -76,7 +76,7 @@ class Resume extends React.Component {
 						</Segment>
 					</Grid.Row>
 					<Grid.Row style={{marginTop: '5vh' }}>
-						<Document file='./assets/hailey_bobella_resume.pdf' loading='Retrieving PDF, please wait...'>
+							<Document file='./assets/hailey_bobella_resume.pdf' loading={<Icon name='spinner' loading={true} />}>
 							<Page pageNumber={1} scale={this.state.scale} maxScale={1.8} />
 						</Document>
 					</Grid.Row>
