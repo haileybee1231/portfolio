@@ -152,6 +152,15 @@ class MusicPage extends React.Component {
 							<Header as='h3'><a href='http://ovrld.com/interviews/little-thief-interview/' target='_blank'>-Ovrld</a></Header>
 							<Header as='h4'>Music has always been a great source of catharsis for me. I grew up playing the cello, and began guitar when I turend fourteen. Since then, I have played in various bands and composed my own music. <a href='https://www.facebook.com/littlethief4/' target='_blank'>Little Thief</a> is my first concerted solo effort.</Header>
 							<Header as='h4'>I recorded, mixed, and produced all the sounds on my debut, <em>It Didn't End, Tomrorow Came</em> in late 2016. I'm always writing more, and my sophomore effort will be released later this year.</Header>
+							<iframe 
+								width="560" 
+								height="315" 
+								src="https://www.youtube.com/embed/KFPwbKBTz-g?start=60" 
+								frameborder="0" 
+								allow="autoplay; encrypted-media" 
+								allowfullscreen
+							>
+							</iframe>
 							<iframe
 								style={styles.iframeEmbed}
 								src="https://bandcamp.com/EmbeddedPlayer/album=1880603118/size=large/bgcol=333333/linkcol=0f91ff/transparent=true/"
